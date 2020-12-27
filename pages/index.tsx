@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function Home() {
+  const { t } = useTranslation('common');
   return (
     <div className="container">
       <Head>
@@ -9,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        
+        <h1>{t("hello")}</h1>
       </main>
     </div>
   )
